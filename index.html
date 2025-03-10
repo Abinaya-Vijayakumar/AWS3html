@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Loader</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            margin: 30px;
+        }
+        .load{
+            width: 100%;
+            height: 500px;
+        }
+        .image-container{
+            border: 2px solid black;
+            float: left;
+            width: 19.7%;
+            height: 400px;
+        }
+        .image-container img {
+            float: left;
+            width: 100%;
+            height:400px;
+        }
+        .button{
+            margin-top: -100px;
+            width: 100%;
+            height: 200px;
+        }
+        .btn{
+            float: left;
+            width: 19.7%;
+            height:70px;
+            border: 2px solid black;
+        }
+        button {
+            width: 100%;
+            height:70px;
+            font-size: 30px;
+            margin-left: 0px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 600px) {
+            .image-container {
+                width: 100%;
+                height: 400px;
+            }
+
+            .button {
+                gap: 5px;
+            }
+
+            .btn {
+                width: 100%;
+                height: 50px;
+            }
+
+            button {
+                font-size: 14px;
+                height: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>LOAD IMAGES</h1>
+
+<div class="load">
+    <div class="image-container">
+        <img id="img1" src="" alt="Image 1" style="display:none;">
+        </div>
+        <div class="image-container">
+        <img id="img2" src="" alt="Image 2" style="display:none;">
+        </div>
+        <div class="image-container">
+        <img id="img3" src="" alt="Image 3" style="display:none;">
+        </div>
+        <div class="image-container">
+        <img id="img4" src="" alt="Image 4" style="display:none;">
+        </div>
+        <div class="image-container">
+        <img id="img5" src="" alt="Image 5" style="display:none;">
+    </div>
+    </div>
+    
+    <div class="button">
+        <div class="btn">
+            <button onclick="loadImage(1)">Load1</button>
+        </div>
+        <div class="btn">
+            <button onclick="loadImage(2)">Load2</button>
+        </div>
+        <div class="btn">
+            <button onclick="loadImage(3)">Load3</button>
+        </div>
+        <div class="btn">
+            <button onclick="loadImage(4)">Load4</button>
+        </div>
+        <div class="btn">
+            <button onclick="loadImage(5)">Load5</button>
+        </div>
+    </div>
+
+    <script>
+        function loadImage(imageNumber) {
+            var img = document.getElementById('img' + imageNumber);
+
+            switch(imageNumber) {
+                case 1:
+                    img.src = "https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=";
+                    break;
+                case 2:
+                    img.src = "https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=";
+                    break;
+                case 3:
+                    img.src = "https://static.vecteezy.com/system/resources/thumbnails/024/669/489/small_2x/mountain-countryside-landscape-at-sunset-dramatic-sky-over-a-distant-valley-green-fields-and-trees-on-hill-beautiful-natural-landscapes-of-the-carpathians-generative-ai-variation-5-photo.jpeg";
+                    break;
+                case 4:
+                    img.src = "https://static.vecteezy.com/system/resources/previews/036/226/872/non_2x/ai-generated-nature-landscapes-background-free-photo.jpg";
+                    break;
+                case 5:
+                    img.src = "https://img.freepik.com/premium-photo/wide-angle-shot-single-tree-growing-clouded-sky-sunset-surrounded-by-grass_181624-22807.jpg";
+                    break;
+                default:
+                    img.src = "";
+            }
+
+            img.style.display = 'inline-block';
+        }
+    </script>
+
+</body>
+</html>
